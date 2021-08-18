@@ -47,9 +47,11 @@ document.getElementById('case-increase').addEventListener('click', function(){
     updateInput('case-count', true, 'case-price', 59)
 })
 
-function removeItem(){
-    let items = document.getElementsByClassName('remove-item');
-    for(let item of items){
+
+let items = document.getElementsByClassName('remove-item');
+for(let item of items){
+    item.addEventListener('click', function(){
         item.parentNode.parentNode.parentNode.remove()
-    }
+    })
 }
+    
